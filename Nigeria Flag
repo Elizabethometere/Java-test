@@ -1,0 +1,33 @@
+public class NigeriaFlag {
+    public static void main(String[] args){ 
+        int height = 4; 
+        int width = 12;
+        int StripeWidth = width/3;
+        System.out.println("Flag :");
+        for(int i = 0; i<height*width;i++){
+            if((i%width)<StripeWidth){
+                System.out.print("*");
+            }else if ((i%width)<2*StripeWidth){
+                System.out.print("=");
+            }else{
+                System.out.print("*");
+            }
+            if ((i+1)%width==0){
+            System.out.println();
+            }
+        }
+        System.out.println("\n Flag using nested loop: ");
+        for (int i = 0; i<height; i++){
+            for (int j = 0; j<width; j++){
+                if (j<StripeWidth){
+                    System.out.print("*");
+                }else if(j <2*StripeWidth){
+                     System.out.print("=");
+                }else{
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
